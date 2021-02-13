@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  orders:
+    build: ./orders
+    ports:
+      - 9002:3002
+    restart: always
+
+  products:
+    build: ./products
+    ports:
+      - 9001:3001
+    restart: always
+
+  users:
+    build: ./users
+    ports:
+      - 9000:3000
+    restart: always
