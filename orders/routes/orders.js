@@ -29,7 +29,7 @@ async function getProductInfo(id, res) {
 
 //Create a order
 router.post('/', auth, async (req, res) => {
-
+    
     const order = new Order({
         ...req.body,
         createdBy: req.user._id
